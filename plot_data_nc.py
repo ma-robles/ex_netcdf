@@ -10,10 +10,9 @@ print(filename)
 root=Dataset(filename, 'r')
 
 #lee datos
-#T2 = root.variables['T2'][12]-273.15
-T2 = root.variables['RAINC'][12]+ root.variables['RAINNC'][12]
-lat = root.variables['lat'][:]
-lon = root.variables['lon'][:]
+T2 = root.variables['T2'][12]-273.15
+lat = root.variables['XLAT'][0,:]
+lon = root.variables['XLONG'][0,:]
 
 #obtiene limites
 latmin = lat[0, 0]
